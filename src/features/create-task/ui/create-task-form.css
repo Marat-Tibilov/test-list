@@ -1,0 +1,101 @@
+.create-task {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 8px 8px 17px;
+  background: #fff;
+  border: 1px solid #e0d9ee;
+  border-radius: 11px;
+  box-shadow: 0 3px 9px #4b386206;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.create-task:focus-within {
+  border-color: #9b84d4;
+  box-shadow: 0 0 0 3px #9b84d414;
+}
+
+.create-task__icon {
+  color: #b6a8cc;
+  flex-shrink: 0;
+}
+
+.create-task input {
+  width: 100%;
+  min-width: 0;
+  outline: none;
+  border: 0;
+  background: transparent;
+  padding: 9px 0;
+  font-size: 14px;
+  color: #443e51;
+}
+
+.create-task input::placeholder {
+  color: #81768e;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  border: 0;
+  border-radius: 7px;
+  padding: 12px 17px;
+  font-size: 12px;
+  font-weight: 550;
+  white-space: nowrap;
+  transition: background .2s;
+}
+
+.button--primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.button--primary:hover:not(:disabled) {
+  background: #6550b6;
+}
+
+.button--primary:disabled {
+  background: #b7aad8;
+}
+
+.input-hint {
+  margin: 9px 0 23px 3px;
+  color: #857a91;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.input-hint > span {
+  border: 1px solid #e5e0ec;
+  border-radius: 3px;
+  padding: 0 4px;
+  color: #9a90aa;
+  line-height: 13px;
+}
+
+@media (max-width: 600px) {
+  .create-task input {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .create-task {
+    gap: 7px;
+    padding-left: 10px;
+  }
+  .create-task__icon {
+    display: none;
+  }
+  .button {
+    gap: 5px;
+    padding: 12px 10px;
+    font-size: 11px;
+  }
+}

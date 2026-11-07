@@ -1,0 +1,52 @@
+.task-filters {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 15px 18px;
+  border-bottom: 1px solid #f0edf4;
+}
+
+.task-filter {
+  border: 0;
+  background: transparent;
+  border-radius: 6px;
+  padding: 9px 11px;
+  color: #74677f;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: background .15s, color .15s;
+}
+
+.task-filter:hover {
+  background: #f8f6fc;
+  color: #7760ac;
+}
+
+.task-filter--selected {
+  background: #f0eaf9;
+  color: #7a60b3;
+  font-weight: 600;
+}
+
+.task-filter__count {
+  font-size: 11px;
+  color: #8b7d98;
+}
+
+.task-filter--selected .task-filter__count {
+  color: #947abd;
+}
+
+@media (max-width: 400px) {
+  .task-filters {
+    padding: 13px 10px;
+    gap: 3px;
+  }
+  .task-filter {
+    padding: 10px 7px;
+    gap: 5px;
+    font-size: 11px;
+  }
+}

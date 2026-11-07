@@ -1,0 +1,373 @@
+.board-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 248px;
+  align-items: start;
+  gap: 28px;
+}
+
+.task-board {
+  min-width: 0;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  min-height: 28px;
+  margin-bottom: 17px;
+}
+
+.section-heading > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-heading svg {
+  color: #81718f;
+}
+
+.section-heading h2 {
+  font-size: 16px;
+  font-weight: 650;
+  margin: 0;
+  letter-spacing: -.3px;
+}
+
+.total-badge {
+  min-width: 22px;
+  padding: 3px 6px;
+  font-size: 11px;
+  color: #8b7aab;
+  border-radius: 5px;
+  background: #eeebf6;
+  text-align: center;
+}
+
+.section-heading__note {
+  color: #a49eaf;
+  font-size: 11px;
+}
+
+.storage-error {
+  padding: 12px;
+  border: 1px solid #ead8b9;
+  border-radius: 8px;
+  background: #fffbf2;
+  color: #795e31;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.task-panel {
+  border: 1px solid #e9e6ee;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px #38304703;
+  overflow: hidden;
+}
+
+.task-list {
+  margin: 0;
+  padding: 5px 21px;
+  list-style: none;
+  min-height: 276px;
+}
+
+.task-panel__footer {
+  min-height: 47px;
+  border-top: 1px solid #f0edf4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 22px;
+  font-size: 11px;
+  color: #8d7f99;
+}
+
+.task-panel__footer > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #92879f;
+}
+
+.status-dot {
+  width: 5px;
+  height: 5px;
+  background: #b3a0cf;
+  border-radius: 50%;
+}
+
+.empty-state {
+  min-height: 286px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 24px 35px;
+  text-align: center;
+}
+
+.empty-state h3 {
+  margin: 20px 0 9px;
+  font-size: 13px;
+  color: #73667f;
+  font-weight: 550;
+}
+
+.empty-state > p {
+  max-width: 300px;
+  font-size: 11px;
+  color: #83718f;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.empty-state__illustration {
+  position: relative;
+  width: 98px;
+  height: 86px;
+  display: grid;
+  place-items: center;
+}
+
+.empty-state__illustration::before {
+  content: '';
+  position: absolute;
+  width: 91px;
+  height: 78px;
+  background: #f7f3fc;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+}
+
+.empty-state__paper {
+  position: relative;
+  width: 56px;
+  height: 69px;
+  padding: 16px 10px;
+  background: #fff;
+  border: 1px solid #e3d9f0;
+  border-radius: 7px;
+  transform: rotate(-9deg);
+  box-shadow: 3px 4px 0 #e9e0f449;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.empty-state__paper > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.empty-state__paper i {
+  width: 7px;
+  height: 7px;
+  border: 1px solid #d6c6e7;
+  border-radius: 2px;
+}
+
+.empty-state__paper b {
+  width: 21px;
+  height: 3px;
+  border-radius: 2px;
+  background: #e8dff1;
+}
+
+.empty-state__paper > span:last-child b {
+  width: 14px;
+}
+
+.empty-state__check {
+  position: absolute;
+  right: 7px;
+  bottom: 5px;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #baa3dc;
+  color: white;
+  border: 3px solid white;
+}
+
+.empty-state__spark {
+  position: absolute;
+  top: 4px;
+  right: 3px;
+  font-size: 17px;
+  color: #c6b5df;
+}
+
+.progress-card {
+  margin-top: 45px;
+  border: 1px solid #e6dff0;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #f4effb, #f0eaf7);
+  padding: 26px 23px 25px;
+  text-align: center;
+}
+
+.progress-card__eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  color: #a18aba;
+}
+
+.progress-card h2 {
+  font-size: 15px;
+  color: #655078;
+  font-weight: 600;
+  margin: 12px 0 25px;
+}
+
+.progress-ring {
+  width: 124px;
+  height: 124px;
+  margin: auto;
+  background: conic-gradient(from 0deg, #a98ace var(--progress), #e5daef 0);
+  border-radius: 50%;
+  padding: 7px;
+}
+
+.progress-ring__inner {
+  height: 100%;
+  border-radius: 50%;
+  background: #f3eef9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.progress-ring__inner > strong {
+  font-size: 32px;
+  font-weight: 550;
+  color: #8c6cb0;
+  letter-spacing: -1px;
+}
+
+.progress-ring__inner > strong > span {
+  font-size: 18px;
+  margin-left: 2px;
+  font-weight: 450;
+}
+
+.progress-ring__inner > span {
+  font-size: 11px;
+  color: #ab96bf;
+}
+
+.progress-card__count {
+  font-size: 11px;
+  color: #857194;
+  margin: 17px 0 24px;
+}
+
+.progress-card__count strong {
+  color: #82629f;
+  font-weight: 600;
+}
+
+.progress-card__divider {
+  height: 1px;
+  background: #e5dbef;
+}
+
+.progress-card__message {
+  font-size: 12px;
+  color: #8b70a2;
+  margin: 22px 0 8px;
+  font-weight: 550;
+}
+
+.progress-card__hint {
+  font-size: 11px;
+  line-height: 1.8;
+  color: #897297;
+  max-width: 170px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .board-layout {
+    grid-template-columns: minmax(0, 1fr) 210px;
+    gap: 20px;
+  }
+  .section-heading__note {
+    display: none;
+  }
+  .progress-card {
+    padding: 26px 17px;
+  }
+}
+
+@media (max-width: 700px) {
+  .board-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .progress-card {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 68px 1fr;
+    column-gap: 20px;
+    padding: 20px;
+    text-align: left;
+  }
+  .progress-card__eyebrow, .progress-card__divider, .progress-card__message, .progress-card__hint {
+    display: none;
+  }
+  .progress-ring {
+    grid-row: 1 / 3;
+    grid-column: 1;
+    width: 68px;
+    height: 68px;
+    padding: 5px;
+  }
+  .progress-ring__inner {
+    gap: 0;
+  }
+  .progress-ring__inner > strong {
+    font-size: 20px;
+  }
+  .progress-ring__inner > strong > span {
+    font-size: 11px;
+  }
+  .progress-ring__inner > span {
+    display: none;
+  }
+  .progress-card h2 {
+    margin: 12px 0 0;
+    align-self: start;
+    font-size: 14px;
+  }
+  .progress-card__count {
+    margin: 1px 0 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .task-panel__footer {
+    padding: 14px;
+    font-size: 11px;
+  }
+  .task-list {
+    padding: 4px 14px;
+  }
+  .empty-state {
+    padding-inline: 16px;
+  }
+}
